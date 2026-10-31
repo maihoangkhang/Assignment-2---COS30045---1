@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f7f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.responsive-svg-container {
+  max-width: 900px;
+  margin-top: 15px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bar {
+  transition: opacity 0.2s;
+}
+
+.bar:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.1: Drawing with SVG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Exercise 4.1: Drawing with SVG</h1>
+    <p class="description">
+      A simple landscape and house scene drawn entirely with native SVG elements.
+      This exercise demonstrates SVG coordinates, geometric primitives, groups, and styling.
+    </p>
+
+    <!-- Responsive SVG container -->
+    <div class="svg-wrapper">
+      <svg viewBox="0 0 800 500" class="canvas">
+        <!-- 1. Background sky and ground -->
+        <rect class="sky" x="0" y="0" width="800" height="320" />
+        <rect class="grass" x="0" y="320" width="800" height="180" />
+
+        <!-- 2. Sun with rays -->
+        <circle class="sun" cx="680" cy="90" r="40" />
+        <g class="sun-rays">
+          <line x1="680" y1="35" x2="680" y2="15" />
+          <line x1="680" y1="145" x2="680" y2="165" />
+          <line x1="625" y1="90" x2="605" y2="90" />
+          <line x1="735" y1="90" x2="755" y2="90" />
+          <line x1="640" y1="50" x2="625" y2="35" />
+          <line x1="720" y1="130" x2="735" y2="145" />
+        </g>
+
+        <!-- 3. Fluffy clouds using overlapping ellipses inside a group -->
+        <g class="cloud" transform="translate(140, 80)">
+          <ellipse cx="0" cy="0" rx="40" ry="20" />
+          <ellipse cx="30" cy="-10" rx="30" ry="18" />
+          <ellipse cx="-25" cy="-5" rx="25" ry="15" />
+        </g>
+        <g class="cloud" transform="translate(320, 110) scale(0.8)">
+          <ellipse cx="0" cy="0" rx="40" ry="20" />
+          <ellipse cx="30" cy="-10" rx="30" ry="18" />
+          <ellipse cx="-25" cy="-5" rx="25" ry="15" />
+        </g>
+
+        <!-- 4. Tree with trunk and foliage -->
+        <g class="tree" transform="translate(120, 240)">
+          <rect class="tree-trunk" x="25" y="60" width="30" height="90" />
+          <circle class="tree-leaves" cx="40" cy="40" r="50" />
+        </g>
+
+        <!-- 5. House: grouped together so coordinates are relative to the house origin -->
+        <g class="house" transform="translate(360, 180)">
+          <!-- Chimney behind roof -->
+          <rect class="chimney" x="140" y="-15" width="28" height="50" />
+          <!-- Roof: drawn using polygon points (x,y) -->
+          <polygon class="roof" points="-20,40 100,-40 220,40" />
+          <!-- Wall body -->
+          <rect class="wall" x="0" y="40" width="200" height="150" />
+          <!-- Door -->
+          <rect class="door" x="80" y="110" width="40" height="80" />
+          <circle class="doorknob" cx="112" cy="150" r="3" />
+          <!-- Windows -->
+          <rect class="window" x="20" y="65" width="45" height="45" />
+          <rect class="window" x="135" y="65" width="45" height="45" />
+        </g>
+
+        <!-- 6. Curved winding garden path -->
+        <path class="path" d="M460 370 C 440 410, 480 440, 450 500" />
+
+        <!-- 7. Scene title text -->
+        <text class="title-text" x="400" y="40">My SVG House & Garden</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

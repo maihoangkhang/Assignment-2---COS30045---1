@@ -1,0 +1,23 @@
+/*6.1*/
+.bar {
+    fill: #4682b4;
+}
+.bar:hover {
+    fill: #315f86;
+}
+.axis-label {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+/*6.3*/
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    opacity: 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f7f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.intro {
+  font-size: 15px;
+  color: #666;
+}
+
+#viz-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px dashed #ccc;
+  background: #fafafa;
+}
+
+/* Class applied by D3 */
+.d3-note {
+  color: #2c3e50;
+  font-weight: bold;
+}

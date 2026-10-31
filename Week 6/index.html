@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6.1: TV Energy Consumption Histogram</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+   <div class="container">
+    <h1>TV Energy Consumption</h1>
+    <!-- You MUST have this div for the buttons to attach to -->
+    <div id="filters_screen"></div> 
+    <div id="histogram"></div>
+</div>
+<div id="scatterplot" class="responsive-svg-container">
+</div>
+
+<!-- D3 Library MUST load first -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- Constants next -->
+<script src="js/shared-constants.js"></script>
+<!-- Setup functions next -->
+<script src="js/interactions.js"></script>
+<script src="js/histogram.js"></script>
+<script src="js/scatterplot.js"></script>
+<!-- Load data LAST so it can use everything above -->
+<script src="js/load-data.js"></script>
+</body>
+</html>
