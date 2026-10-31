@@ -39,7 +39,7 @@ const populateFilters = (data) => {
             .duration(500)
             .ease(d3.easeCubicInOut)
             .attr("y", d => yScale(d.length))
-            .attr("height", d => (height - margin.top - margin.bottom) - yScale(d.length)); 
+            .attr("height", d => height - yScale(d.length)); 
     };
 };
 
